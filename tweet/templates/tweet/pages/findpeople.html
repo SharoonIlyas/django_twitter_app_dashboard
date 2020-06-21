@@ -1,0 +1,48 @@
+{% extends 'tweet/base.html' %}
+{% block content %}
+	
+	<section class="blog py-5 bg-dark">
+		<div class="container-fluid" id = "find_followed_row">
+			<div class="row">
+				{% for user in users%}
+
+					{% if user.profile in find_followed %}
+						<div class="col-sm-2 mb-2">
+							<div class="card">
+								<img src="{{user.profile.image.url}}" class="w-100">
+								<!--  <div class="card-img-top" alt="Card image cap"></div>-->
+								<div class="card-block">
+									<div class="category fa-align-center">{{user}}</div>
+									<div class="col">
+											<button id = "followID" class="col btn btn-dark-blue follow_button" data-action = "unfollow"  data-user ="{{user}}">unfollow</button>
+									</div> 					
+								</div>
+							</div>
+						</div>
+						
+				 {% elif  user.profile not in find_followed %}
+				
+				       <div class="col-sm-2 mb-2">
+							<div class="card">
+								<img src="{{user.profile.image.url}}" class="w-100">
+								<!--  <div class="card-img-top" alt="Card image cap"></div>-->
+								<div class="card-block">
+									<div class="category fa-align-center">{{user}}</div>
+									<div class="col">
+											<button id = "followID" class="col btn btn-dark-blue follow_button" data-action = "follow"  data-user ="{{user}}">follow</button>
+									</div> 					
+								</div>
+							</div>
+						</div>
+				
+				
+				{% endif %}
+					
+
+				
+				{% endfor %}
+
+			</div>
+		</div>
+	</section>
+{% endblock content %}

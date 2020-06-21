@@ -1,0 +1,176 @@
+body {
+    background-color: #eeeeee;
+}
+
+.h7 {
+    font-size: 0.8rem;
+}
+
+.gedf-wrapper {
+    margin-top: 0.97rem;
+}
+
+@media (min-width: 992px) {
+    .gedf-main {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    .gedf-card {
+        margin-bottom: 2.77rem;
+    }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #eeeeee;
+    /* background: #fff; */
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+
+.bg-dark {
+    background-color: #eeeeee !important;
+}
+
+.blog .card {
+  
+  border-radius: 0;
+  border: 0;
+  background: rgba(10, 4, 95, 0.06);
+
+  transition: background 0.25s;
+  cursor: pointer;
+}
+.blog .card:hover {
+  background: rgba(2, 21, 194, 0.801);
+  transition: background 0.25s;
+}
+
+.blog .card .card-block {
+  padding: 1.1rem;
+  min-height: 160px;
+}
+.blog .card .card-block .category {
+    color: #dd0042;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+    background-color: #189cd5;
+    color: #fff;
+    font-weight: 500;
+    line-height: 100%;
+    font-size: 12px;
+    width: fit-content;
+    padding: 4px 8px 2px;
+    letter-spacing: 0.06rem;
+}
+.blog .card .card-block .card-title {
+    color: #fff;
+    font-size: 19px;
+    line-height: 1.8rem;
+    margin-bottom: 0.4rem;
+}
+
+
+.btn-dark-blue {
+    background: #7474BF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 3px solid #eee;
+}
+
+
+/* ######################### buton class */
+/*************************
+        button
+*************************/
+
+.button {
+    font-size: 14px;
+    text-align: center;
+    border: 0px solid transparent;
+    background: #db2d2e;
+    color: #ffffff;
+    display: inline-block;
+    text-transform: capitalize;
+    vertical-align: middle;
+    padding: 8px 20px;
+    -ms-transform: perspective(1px) translateZ(0);
+    -o-transform: perspective(1px) translateZ(0);
+    -moz-transform: perspective(1px) translateZ(0);
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    -ms-transition-property: color;
+    -moz-transition-property: color;
+    -o-transition-property: color;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -ms-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #323232;
+    -ms-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -ms-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -ms-transition-property: transform;
+    -moz-transition-property: transform;
+    -o-transition-property: transform;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -moz-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -ms-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.button:hover,
+.button:focus,
+.button:active {
+    color: #ffffff;
+}
+
+.button:hover:before,
+.button:focus:before,
+.button:active:before {
+    -moz-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -moz-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.50);
+    -ms-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.50);
+    -o-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.50);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.50);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.50);
+}
+
+
+
+/* ######################### buton class */

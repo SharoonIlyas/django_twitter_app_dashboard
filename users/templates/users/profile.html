@@ -1,0 +1,39 @@
+{% extends "tweet/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% load static %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 img">
+      <img src="{{user.profile.image.url}}"  alt="" class="rounded-circle z-depth-0">
+    </div>
+    <div class="col-md-6 details">
+      <blockquote>
+        <h5>{{user.username}}</h5>
+        <small><cite title="Source Title">{{user.email}} <i class="icon-map-marker"></i></cite></small>
+      </blockquote>
+      <p>
+        fionagallager@shameless.com <br>
+        www.bootsnipp.com <br>
+        June 18, 1990
+      </p>
+    </div>
+          <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <fieldset class="form-group">
+              <legend class="border-bottom mb-4">Profile Info</legend>
+              {{ u_form|crispy }}
+              {{ p_form|crispy }}
+          </fieldset>
+          <div class="form-group">
+              <button class="btn btn-outline-info" type="submit">Update</button>
+          </div>
+      </form>
+  </div>
+</div>
+
+
+
+
+{% endblock content %}

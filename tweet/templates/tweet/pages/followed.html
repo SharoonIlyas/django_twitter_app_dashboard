@@ -1,0 +1,43 @@
+{% extends 'tweet/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+
+<section class="blog py-5 bg-dark" >
+		<div class="container-fluid" id ="followed_row">
+			<div class="row" >
+				
+				{% for follow in followed  %}
+				<div class="col-sm-2 mb-2">
+					<div class="card">
+						<img src="{{follow.user.profile.image.url}}" class="w-100">
+						<!--  <div class="card-img-top" alt="Card image cap"></div>-->
+						<div class="card-block">
+							<div class = "title">{{follow.user}}</div>
+							<div class="col">
+									<button id = "unfollowID" class="col btn btn-dark-blue follow_button" data-action = "unfollow" data-user ="{{follow.user}}">Unfollow</button>
+							</div> 					
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
