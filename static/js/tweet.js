@@ -15,20 +15,17 @@ function getCookie(name)
     }
     return cookieValue;
 }
-
 var csrftoken = getCookie('csrftoken');
-window.onload=function()
-{
-    var form = document.getElementById('#form-id')
-    if(form){
+///////////////////////////////////////////////////////////////////
 
-        form.addEventListener('submit', function(e)
-        {
-            e.preventDefault()
-            console.log('Form submitted')
+$(document).ready(function(){
+    $(document).on('click', '.tweet_button', function(e){
+            e.preventDefault();
             var url = 'http://127.0.0.1:8000/api/tweet-create/'
             
             var text = document.getElementById('title').value
+
+            console.log(text)
             fetch(url, 
             {
                 method:'POST',
@@ -44,18 +41,14 @@ window.onload=function()
             .then(function(response)
                 {
                     console.log(response)  
-                    document.getElementById('form-id').reset()
+                    document.getElementById('title').value =""
                     $("#wrapper").load(location.href + " #wrapper");
     
             })
-        })
-    }
-    
-   
-    
-}
-
-
+       
+        
+    })
+})
 
 
 
@@ -103,14 +96,6 @@ function followToggle(user_name, action)
             })
         
 }
-
-
-        
-        
-
-
-
-
 
 function deleteItem(id){
             console.log('Delete clicked')
